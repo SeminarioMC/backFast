@@ -1,0 +1,22 @@
+var Mongoose=require('mongoose'),
+    Schema=Mongoose.Schema,
+    GasolinaSchema=Schema({
+        porcentaje:Number,
+        fecha:Date
+    }),
+    RutaSchema=Schema({
+        lat:Number,
+        lng:Number,
+        fecha:Date
+    }),
+    CarSchema=Schema({
+        placa:String,
+        ruta:[RutaSchema],
+        gasolina:[GasolinaSchema],
+        ultimaRuta:RutaSchema,
+        ultimaGasolina:GasolinaSchema
+    });
+module.exports.CarSchema=CarSchema;
+module.exports.GasolineSchema=GasolinaSchema;
+module.exports.RutaSchema=RutaSchema;
+module.exports.CarModel=Mongoose.model("car",CarSchema);

@@ -1,0 +1,38 @@
+{
+  "name": "ventasProjectBackend",
+  "version": "0.0.1",
+  "description": "ventas backend",
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "express": "^4.16.3",
+    "jwt-simple": "^0.5.1",
+    "mocha": "^2.4.5",
+    "moment": "^2.20.1",
+    "mongoose": "^5.0.7",
+    "morgan": "^1.7.0",
+    "object-assign": "4.1.0",
+    "validator": "^9.4.0"
+  },
+  "engine": {
+    "node": "*",
+    "npm": "*"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/openshift/nodejs-ex.git"
+  },
+  "author": "Steve Speicher <sspeiche@gmail.com>",
+  "license": "CC-BY-1.0",
+  "bugs": {
+    "url": "http://github.com/openshift/nodejs-ex/issues"
+  },
+  "homepage": "http://github.com/openshift/nodejs-ex"
+}
