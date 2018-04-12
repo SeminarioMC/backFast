@@ -7,6 +7,5 @@ Schema=Mongoose.Schema,
         prueba:String,
         longitud:String
     });
-
 module.exports.InscripcionSchema=InscripcionSchema;
 module.exports.InscripcionModel=Mongoose.model("account",InscripcionSchema);

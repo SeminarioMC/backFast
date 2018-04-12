@@ -5,8 +5,6 @@ var express=require('express')
     ,app=express()
     ,mongo=require('mongoose')
     ,inscripcionRuta=require('./app/Inscripcion/inscripciones.routes')
-    // ,accountRoutes=require('./app/account/account.e.routes')
-    // ,carRoutes=require('./app/car/car.e.routes')
 ;
 
 app.use(cors());
@@ -23,6 +21,4 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use('/in',inscripcionRuta);
 
- // app.use('/api/account',accountRoutes);
-// app.use('/api/car',carRoutes);
 module.exports=app;
