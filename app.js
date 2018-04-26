@@ -5,14 +5,14 @@ var express=require('express')
     ,app=express()
     ,mongo=require('mongoose')
     ,inscripcionRuta=require('./app/Inscripcion/inscripciones.routes')
+    ,tallerRuta=require('./app/taller/taller.routes')
 ;
 
 app.use(cors());
 
-mongo.connect('mongodb://PaulPinelo:PaulPinelo@cluster0-shard-00-00-zbs3g.mongodb.net:27017,cluster0-shard-00-01-zbs3g.mongodb.net:27017,cluster0-shard-00-02-zbs3g.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin')
+mongo.connect('mongodb://PaulPinelo:PaulPinelo@cluster0-shard-00-00-zbs3g.mongodb.net:27017,cluster0-shard-00-01-zbs3g.mongodb.net:27017,cluster0-shard-00-02-zbs3g.mongodb.net:27017/guffy?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin')
     .then(()=>{
         console.log("Conectado a la BD...")
-
     })
     .catch(err=>console.log(err));
 
@@ -20,5 +20,6 @@ mongo.connect('mongodb://PaulPinelo:PaulPinelo@cluster0-shard-00-00-zbs3g.mongod
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use('/in',inscripcionRuta);
+app.use('/taller',tallerRuta);
 
 module.exports=app;

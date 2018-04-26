@@ -1,11 +1,11 @@
 var Mongoose=require('mongoose'),
-Schema=Mongoose.Schema,
+    Schema=Mongoose.Schema,
     InscripcionSchema=Schema({
+        dni:String,
         nombre:String,
-        fecha:String,
-        categoria:String,
-        prueba:String,
-        longitud:String
+        apellidos:String,
+        correo:String,
+        talleres:[Schema.Types.ObjectId]
     });
 module.exports.InscripcionSchema=InscripcionSchema;
 module.exports.InscripcionModel=Mongoose.model("account",InscripcionSchema);

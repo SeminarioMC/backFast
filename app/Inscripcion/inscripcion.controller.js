@@ -5,7 +5,8 @@ var
 module.exports.insert=function (req,res) {
     var newIns=ins(req.body);
     newIns.save(function(err){
-        res.send({
+        if(err)throw err;
+        res.status(200).send({
             res:'OK'
         })
     })
