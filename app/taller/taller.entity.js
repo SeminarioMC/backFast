@@ -3,6 +3,7 @@ var Mongoose=require('mongoose'),
     TallerSchema=Schema({
         nombre:String,
         horario:String,
+        ambiente:String,
         costo:String
     });
 module.exports.TallerSchema=TallerSchema;
