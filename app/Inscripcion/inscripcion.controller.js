@@ -5,7 +5,8 @@ var
 module.exports.insert=function (req,res) {
     var newIns=ins(req.body);
     newIns.save(function(err){
-        if(err)throw err;
+        if(err)
+            res.status(403).send({error:'eres un guffy'});
         res.status(200).send({
             res:'OK'
         })
