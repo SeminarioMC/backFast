@@ -19,3 +19,13 @@ module.exports.obtener=function (req,res) {
         res.send(docs)
     })
 };
+
+module.exports.obtener_id=function(req,res){
+    dni=req.params.id;
+    ins.find({"dni":new mongoose.mongo.ObjectId(dni)},function (err,data) {
+        if(err) throw  err;
+        res.status(200).send({
+            res:data
+        })
+    })
+};
